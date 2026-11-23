@@ -23,7 +23,9 @@ def parse_discount_percent(raw_value: str) -> int:
 
 
 def get_latest_item(items: list[str]) -> str:
-    return items[5]
+    if not items:
+        raise ValueError("Empty list provided")
+    return items[-1]
 
 
 SCENARIOS = {
