@@ -8,6 +8,8 @@ PORT = 8080
 
 
 def calculate_share(part: float, total: float) -> float:
+    if total == 0:
+        raise ValueError("total must not be zero")
     return part / total
 
 
