@@ -39,8 +39,8 @@ SCENARIOS = {
     },
     "value_error": {
         "title": "3. ValueError",
-        "desc": "Некорректное значение скидки ('abc' -> int)",
-        "action": lambda: parse_discount_percent("abc"),
+        "desc": "Скидка передана со знаком процента ('15%' -> int)",
+        "action": lambda: parse_discount_percent("15%"),
     },
     "index_error": {
         "title": "4. IndexError",
