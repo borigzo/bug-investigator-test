@@ -1,10 +1,11 @@
 import html
+import os
 import traceback
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from urllib.parse import parse_qs
 
-HOST = "127.0.0.1"
-PORT = 8080
+HOST = os.getenv("HOST", "127.0.0.1")
+PORT = int(os.getenv("PORT", "8080"))
 
 
 def calculate_share(part: float, total: float) -> float:
